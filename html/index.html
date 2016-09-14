@@ -1,5 +1,5 @@
 <html>
-
+<div class="container">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -32,7 +32,7 @@ break;
 }
 testV+=1;
 var pass1 =
-prompt('Sorry, seems like you have an incorrect password','Password');
+prompt('Sorry, seems like you do not have the correct key','Password');
 }
 if (pass1.toLowerCase()!="password" & testV ==3)
 history.go(-1);
@@ -41,12 +41,11 @@ return " ";
 </script>
 
   <meta type="text/css" charset="utf-8">
-  <link rel="stylesheet" href="file:///Users/luyizhang/Desktop/tbs2/savethedate/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
   <title> L+J Save the Date </title>
 </head>
 
-<div class="container">
 <body onload="move()" >
   <p>
     <div id="myProgress">
@@ -54,9 +53,10 @@ return " ";
     </div>
     <h1> Save the Date </h1>
     <h3> for the wedding of </h3>
-    <center> <img id="turtle" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/turtle.png" alt="turtle" style="width: 500px;"></center>
+    <center> <img id="turtle" src="../pngs/turtle.png" alt="turtle" style="width: 500px;"></center>
     <div id="date"><h3> on March 25, 2017 </h3></div>
     <div id="location"><h3> in NY, NY </h3></div>
+
     <center>
     <div id="RSVP">
     <form>
@@ -64,20 +64,22 @@ return " ";
     </form>
     </div>
     </center>
-    <div id="formal"><h4> Formal invitation to follow </h4></div>
-    <center><img id="flag" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/flag.png" alt="flag"></center>
-    <center><img id="castlea" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/castlea.png" alt="castlea"></center>
-    <center><img id="castleb" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/castleb.png" alt="castleb"></center>
-    <img id="peach" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/peach.png" alt="peach">
-    <img id="mario" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/mario.png" alt="mario">
-    <img id="mario2" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/mario.png" alt="mario2">
-    <img id="peach2" src="file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/peach.png" alt="peach2">
-  </p>
 
+    <div id="RSVPby"><h4>Formal invitation to follow</h4></div>
+
+    <center><img id="flag" src="../pngs/flag.png" alt="flag"></center>
+    <center><img id="castlea" src="../pngs/castlea.png" alt="castlea"></center>
+    <center><img id="castleb" src="../pngs/castleb.png" alt="castleb"></center>
+    <img id="peach" src="../pngs/peach.png" alt="peach">
+    <img id="mario" src="../pngs/mario.png" alt="mario">
+    <img id="mario2" src="../pngs/mario.png" alt="mario2">
+    <img id="peach2" src="../pngs/peach.png" alt="peach2">
+  </p>
 </body>
 </div>
 
 <footer>
+<div> </div>
 </footer>
 
 </html>

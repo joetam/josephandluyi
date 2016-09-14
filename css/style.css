@@ -1,19 +1,50 @@
 html {
 	position: relative;
-	min-height: 100vh
-	min-width: 100vw;
+	min-height: 100%;
 }
 
 body {
-  background-image: url("file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/sky.png");
+  background-image: url("../pngs/sky.png");
+	background-size: 700px;
 	z-index: 0;
-  background-size: 100vh;
-	margin: 0;
-	padding: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
-.container {
+#container {
+	min-height: 100%;
+	position: relative;
 	overflow: hidden;
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+footer {
+	position: relative;
+	z-index: 1;
+  bottom: 0;
+  left: -1vw;
+	margin: 0;
+  width:110%;
+  height: 128px;
+  background-image: url("../pngs/land.png");
+	overflow: hidden;
+}
+
+#myProgress {
+	position: relative;
+	top: -1.25vh;
+	left: -5vw;
+	width: 110vw;
+	height: 5px;
+	background-color: #4E5B84;
+}
+#myBar {
+    position: absolute;
+    width: 1vw;
+    height: 100%;
+    background-color: #92C81A;
 }
 
 @font-face{
@@ -55,6 +86,17 @@ h3 {
 	background-color: none;
 }
 
+#RSVPby {
+	position: relative;
+	margin: 10px;
+	top: -15vh;
+	color: #FFFFFF;
+	opacity: 0;
+	animation: appear 1s normal ease-in;
+	animation-fill-mode: forwards;
+	animation-delay: 12s;
+}
+
 h4 {
 	color: #38415E;
 	font-family: 'coders', sans-serif;
@@ -63,16 +105,6 @@ h4 {
 	letter-spacing: 3px;
 	font-weight: 200;
 	background-color: none;
-}
-
-#formal {
-	position: relative;
-	margin: 10px;
-	top: -15vh;
-	opacity: 0;
-	animation: appear 1s normal ease-in;
-	animation-fill-mode: forwards;
-	animation-delay: 12s;
 }
 
 input[type=button] {
@@ -102,18 +134,14 @@ input[type=button]:hover {
 	border: 4px solid #92C81A;
 }
 
-#myProgress {
-    position: relative;
-		top: -2.5vh;
-    width: 100vw;
-    height: 5px;
-    background-color: #4E5B84;
+#date {
+	position: relative;
+	top:-10vh;
 }
-#myBar {
-    position: absolute;
-    width: 1vw;
-    height: 100%;
-    background-color: #92C81A;
+
+#location {
+	position: relative;
+	top:-13vh;
 }
 
 #castlea {
@@ -123,16 +151,6 @@ input[type=button]:hover {
 	float: left;
 	left: 36vw;
 	top:-15vh;
-}
-
-#date {
-	position: relative;
-	top:-10vh;
-}
-
-#location {
-	position: relative;
-	top:-13vh;
 }
 
 #castleb {
@@ -198,7 +216,7 @@ input[type=button]:hover {
 @keyframes appear {
 	0% {
 		opacity: 0;
-		visbility: hidden;
+		visibility: hidden;
 	}
 	100% {
 		opacity: 1;
@@ -332,15 +350,6 @@ input[type=button]:hover {
 		-ms-transform: scale(-1, 1);
 		transform: scale(-1, 1);
 	}
-}
-
-footer {
-	z-index: 4;
-  bottom: 0;
-  left: 0;
-  width:100%;
-  height: 128px;
-  background-image: url("file:///Users/luyizhang/Desktop/tbs2/savethedate/pngs/land.png");
 }
 
 #turtle {
