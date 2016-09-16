@@ -86,17 +86,6 @@ h3 {
 	background-color: none;
 }
 
-#RSVPby {
-	position: relative;
-	margin: 10px;
-	top: -15vh;
-	color: #FFFFFF;
-	opacity: 0;
-	animation: appear 1s normal ease-in;
-	animation-fill-mode: forwards;
-	animation-delay: 12s;
-}
-
 h4 {
 	color: #38415E;
 	font-family: 'coders', sans-serif;
@@ -113,7 +102,7 @@ input[type=button] {
 	padding:10px 20px;
 	z-index: 1;
 	margin: 15px;
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(255,255,255,0.4);
 	border: 4px solid #1D7D3E;
 	border-radius: 2px;
 	color: #38415E;
@@ -126,7 +115,7 @@ input[type=button] {
 	text-decoration:none;
 	animation: appear 1s normal ease-in;
 	animation-fill-mode: forwards;
-	animation-delay: 10s;
+	animation-delay: 12s;
 }
 
 input[type=button]:hover {
@@ -149,68 +138,109 @@ input[type=button]:hover {
 	z-index:-2;
 	padding-top: 15px;
 	float: left;
-	left: 36vw;
+	left: 38vw;
 	top:-15vh;
 }
 
 #castleb {
 	position: relative;
 	float: left;
-	left: 17vw;
+	left: 19vw;
 	z-index:1;
 	top: 22vh;
+}
+
+#bushA {
+	position: relative;
+	float: left;
+	left: -40vw;
+	z-index:-2;
+	top: 35.5vh;
+}
+
+#hill {
+	position: relative;
+	float: left;
+	left: -50vw;
+	z-index:-2;
+	top: 32vh;
+}
+
+#bighill {
+	position: relative;
+	float: left;
+	left: 18vw;
+	z-index:-3;
+	top: 0vh;
+}
+
+#largehill {
+	position: absolute;
+	left: -5vw;
+	z-index:-3;
+	top: 135vh;
+}
+
+#bushB {
+	position: relative;
+	float: left;
+	left: 35vw;
+	z-index:-2;
+	top: 35.5vh;
 }
 
 #flag {
 	position:relative;
 	float: left;
-	left: 45.25vw;
+	left: 47.25vw;
 	top: 0vh;
 	opacity: 0;
 	z-index:-3;
 	animation: raise 5s normal ease-out;
 	animation-fill-mode: forwards;
-	animation-delay: 8s;
+	animation-delay: 10s;
 }
 
 #peach {
 	position: relative;
-	left: -50vw;
-	top: 32vh;
+	left: -100vw;
+	top: 32.5vh;
 	z-index:2;
 	animation: Peachwalk 5s normal ease-out;
 	animation-fill-mode: forwards;
+	animation-delay: 2s;
 }
 
 #peach2 {
 	position: relative;
-	left: -28vw;
-	bottom: -10.5vh;
+	left: -45vw;
+	bottom: 5vh;
 	z-index: -2;
 	opacity: 0;
 	animation: Peachwalk2 3s normal linear;
 	animation-fill-mode: forwards;
-	animation-delay: 6s;
+	animation-delay: 8s;
 }
 
 #mario {
 	position: relative;
-	left: 50vw;
-	top: 32vh;
+	left: 10vw;
+	top: 32.5vh;
 	z-index:3;
 	animation: Mariowalk 5s normal ease-out;
 	animation-fill-mode: forwards;
+	animation-delay: 2s;
 }
 
 #mario2 {
 	position: relative;
-	left: -24vw;
-	bottom: -10.5vh;
+	left: -41vw;
+	bottom: 5vh;
 	opacity: 0;
 	z-index: -1;
 	animation: Mariowalk2 3s normal linear;
 	animation-fill-mode: forwards;
-	animation-delay: 6s;
+	animation-delay: 8s;
 }
 
 @keyframes appear {
@@ -244,22 +274,22 @@ input[type=button]:hover {
 
 @keyframes Peachwalk {
 	0% {
-		left:-50vw;
+		left:-96vw;
 	}
 	90% {
 		opacity: 1;
-		left: 3vw;
+		left: -41vw;
 		transform: scale(1);
 	}
 	95% {
 		opacity: 0.5;
-		left:3vw;
+		left:-41vw;
 		transform: scale(0.5);
 	}
 	100% {
 		opacity: 0;
 		transform: scale(0.5);
-		left:3vw;
+		left:-41vw;
 	}
 }
 
@@ -267,18 +297,18 @@ input[type=button]:hover {
 	0% {
 		opacity: 0;
 		transform: scale(0.5);
-		left:-10vw;
+		left:-45vw;
 	}
 	25% {
 		opacity: 1;
 		transform: scale(1);
 		height: 100px;
-		left: -10vw;
+		left: -45vw;
 	}
 	90% {
 		opacity: 1;
 		height: 100px;
-		left:-7vw;
+		left:-42vw;
 		-moz-transform: scale(1, 1);
 	-webkit-transform: scale(1, 1);
 	-o-transform: scale(1, 1);
@@ -286,7 +316,7 @@ input[type=button]:hover {
 	transform: scale(1, 1);
 	}
 	100% {
-		left: -7vw;
+		left: -42vw;
 		height: 100px;
 		opacity: 1;
 		-moz-transform: scale(-1, 1);
@@ -300,21 +330,39 @@ input[type=button]:hover {
 
 @keyframes Mariowalk {
 	0% {
-		left:50vw;
+		left:10vw;
+	}
+	10% {
+		transform:translateY(-130%)
+	}
+	20% {
+		transform:translateY(0)
+	}
+	30% {
+		transform:translateY(-130%)
+	}
+	40% {
+		transform:translateY(0)
+	}
+	50% {
+		transform:translateY(-130%)
+	}
+	60% {
+		transform:translateY(0)
 	}
 	90% {
 		opacity: 1;
-		left:-1vw;
+		left:-45vw;
 		transform: scale(1);
 	}
 	95% {
 		opacity: 0.5;
-		left: -1vw;
+		left: -45vw;
 		transform: scale(0.5);
 	}
 	100% {
 		opacity: 0;
-		left: -1vw;
+		left: -45vw;
 		transform: scale(0.5);
 	}
 }
@@ -323,17 +371,17 @@ input[type=button]:hover {
 	0% {
 		opacity: 0;
 		transform: scale(0.5);
-		left:-6vw;
+		left:-41vw;
 	}
 	25% {
 		opacity: 1;
 		transform: scale(1);
-		left: -6vw;
+		left: -41vw;
 	}
 	90% {
 		opacity: 1;
 		transform: scale(1);
-		left:-8vw;
+		left:-44vw;
 		-moz-transform: scale(1, 1);
 	-webkit-transform: scale(1, 1);
 	-o-transform: scale(1, 1);
@@ -341,7 +389,7 @@ input[type=button]:hover {
 	transform: scale(1, 1);
 	}
 	100% {
-		left: -8vw;
+		left: -44vw;
 		height: 64px;
 		opacity: 1;
 		-moz-transform: scale(-1, 1);

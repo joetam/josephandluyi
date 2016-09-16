@@ -2,11 +2,21 @@
 <div class="container">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
+<script>
+
+function start_scroll_down() {
+     scroll = setInterval(function(){ window.scrollBy(0, 3000); console.log('start');}, 1500);
+   }
+
+function stop_scroll_down() {
+     clearInterval(scroll);
+     console.log('stop');
+  }
+
 function move() {
   var elem = document.getElementById("myBar");
   var width = 1;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, 25);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
@@ -16,9 +26,7 @@ function move() {
     }
   }
 }
-</script>
 
-<script>
 function passWord() {
 var testV = 1;
 var pass1 = prompt('Please enter your password',' ');
@@ -46,7 +54,7 @@ return " ";
   <title> L+J Save the Date </title>
 </head>
 
-<body onload="move()" >
+<body onload="setTimeout(start_scroll_down, 1200);move();setTimeout(stop_scroll_down, 4000)">
   <p>
     <div id="myProgress">
     <div id="myBar"></div>
@@ -64,12 +72,14 @@ return " ";
     </form>
     </div>
     </center>
-
-    <div id="RSVPby"><h4>Formal invitation to follow</h4></div>
-
     <center><img id="flag" src="../pngs/flag.png" alt="flag"></center>
     <center><img id="castlea" src="../pngs/castlea.png" alt="castlea"></center>
     <center><img id="castleb" src="../pngs/castleb.png" alt="castleb"></center>
+    <img id="bushA" src="../pngs/bushA.png" alt="bushA">
+    <img id="bushB" src="../pngs/bushB.png" alt="bushB">
+    <img id="hill" src="../pngs/hill.png" alt="hill">
+    <img id="bighill" src="../pngs/bighill.png" alt="bighill">
+    <img id="largehill" src="../pngs/bighill.png" alt="largehill">
     <img id="peach" src="../pngs/peach.png" alt="peach">
     <img id="mario" src="../pngs/mario.png" alt="mario">
     <img id="mario2" src="../pngs/mario.png" alt="mario2">
