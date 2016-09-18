@@ -1,5 +1,6 @@
 <html>
-<div class="container">
+<div id="container">
+<div id="header">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="scripts/google-analytics.js"></script>
@@ -36,18 +37,21 @@ function move() {
   <link rel='icon' href='favicon.ico' type='image/x-icon'/>
   <title> L+J Save the Date </title>
 </head>
+</div>
 
+<div id="body">
 <body onload="setTimeout(start_scroll_down, 1200);move();setTimeout(stop_scroll_down, 4000)">
   <p>
     <div id="myProgress">
     <div id="myBar"></div>
     </div>
+
     <div id="information">
     <h1> Save the Date </h1>
     <h3> for the wedding of </h3>
     <center> <img id="turtle" src="pngs/turtle.png" alt="turtle" style="width: 500px;"></center>
-    <div id="date"><h3> on March 25, 2017 </h3></div>
-    <div id="location"><h3> in Manhattan, New York City </h3></div>
+    <div id="info"><h3> on March 25, 2017
+    <br> in Manhattan, New York City </h3></div>
     </div>
 
     <center>
@@ -57,6 +61,11 @@ function move() {
     </form>
     </div>
     </center>
+
+    <div id="character">
+    <img id="peach" src="pngs/peach.png" alt="peach">
+    <img id="mario" src="pngs/mario.png" alt="mario">
+    </div>
 
     <center><div id="castle">
     <img id="flag" src="pngs/flag.png" alt="flag">
@@ -73,16 +82,13 @@ function move() {
     <img id="bighill" src="pngs/bighill.png" alt="bighill">
     <img id="largehill" src="pngs/bighill.png" alt="largehill">
     </div></center>
-    <div id="character">
-    <img id="peach" src="pngs/peach.png" alt="peach">
-    <img id="mario" src="pngs/mario.png" alt="mario">
-    </div>
+
   </p>
 </body>
 </div>
 
-<footer>
-<div> </div>
-</footer>
+<div id="footer">
+</div>
 
+</div>
 </html>
