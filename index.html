@@ -27,12 +27,30 @@ function move() {
   }
 }
 
-
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please enter your password',' ');
+while (testV < 3) {
+if (!pass1)
+history.go(-1);
+if (pass1.toLowerCase() == "thebritisharecoming") {
+alert('You Got it Right!');
+window.open('https://docs.google.com/forms/d/e/1FAIpQLSdVxTLpim90R_QY_HeDWwz0mTPiFKxPMs6WvDDSxH6ZH9eFAw/viewform');
+break;
+}
+testV+=1;
+var pass1 =
+prompt('Sorry, seems like you do not have the correct key','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3)
+history.go(-1);
+return " ";
+}
 </script>
 
   <meta type="text/css" charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ >
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
   <title> L+J Save the Date </title>
 </head>
 
@@ -41,11 +59,13 @@ function move() {
     <div id="myProgress">
     <div id="myBar"></div>
     </div>
+    <div id="information">
     <h1> Save the Date </h1>
     <h3> for the wedding of </h3>
-    <center> <img id="turtle" src="pngs/turtle.png" alt="turtle" style="width: 500px;"></center>
+    <center> <img id="turtle" src="../pngs/turtle.png" alt="turtle" style="width: 500px;"></center>
     <div id="date"><h3> on March 25, 2017 </h3></div>
-    <div id="location"><h3> in NY, NY </h3></div>
+    <div id="location"><h3> in Manhattan, New York City </h3></div>
+    </div>
 
     <center>
     <div id="RSVP">
@@ -54,18 +74,26 @@ function move() {
     </form>
     </div>
     </center>
-    <center><img id="flag" src="pngs/flag.png" alt="flag"></center>
-    <center><img id="castlea" src="pngs/castlea.png" alt="castlea"></center>
-    <center><img id="castleb" src="pngs/castleb.png" alt="castleb"></center>
-    <img id="bushA" src="pngs/bushA.png" alt="bushA">
-    <img id="bushB" src="pngs/bushB.png" alt="bushB">
-    <img id="hill" src="pngs/hill.png" alt="hill">
-    <img id="bighill" src="pngs/bighill.png" alt="bighill">
-    <img id="largehill" src="pngs/bighill.png" alt="largehill">
-    <img id="peach" src="pngs/peach.png" alt="peach">
-    <img id="mario" src="pngs/mario.png" alt="mario">
-    <img id="mario2" src="pngs/mario.png" alt="mario2">
-    <img id="peach2" src="pngs/peach.png" alt="peach2">
+
+    <center><div id="castle">
+    <img id="flag" src="../pngs/flag.png" alt="flag">
+    <img id="castletop" src="../pngs/castlea.png" alt="castletop">
+    <img id="mario2" src="../pngs/mario.png" alt="mario2">
+    <img id="peach2" src="../pngs/peach.png" alt="peach2">
+    <img id="castlebottom" src="../pngs/castleb.png" alt="castlebottom">
+    </div></center>
+
+    <center><div id="forestry">
+    <img id="bushA" src="../pngs/bushA.png" alt="bushA">
+    <img id="bushB" src="../pngs/bushB.png" alt="bushB">
+    <img id="hill" src="../pngs/hill.png" alt="hill">
+    <img id="bighill" src="../pngs/bighill.png" alt="bighill">
+    <img id="largehill" src="../pngs/bighill.png" alt="largehill">
+    </div></center>
+    <div id="character">
+    <img id="peach" src="../pngs/peach.png" alt="peach">
+    <img id="mario" src="../pngs/mario.png" alt="mario">
+    </div>
   </p>
 </body>
 </div>
