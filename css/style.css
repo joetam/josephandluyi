@@ -9,7 +9,7 @@ html, body {
 	top: -16px;
 	width: 100%;
 	min-height: 100%;
-	padding-bottom: 128px;
+	padding-bottom: 270px;
 	overflow: hidden;
 }
 
@@ -147,7 +147,7 @@ input[type=button]:hover {
 
 #flag {
 	position: absolute;
-	left: 330px;
+	left: 230px;
 	top: -210px;
 	opacity: 0;
 	z-index:-3;
@@ -219,7 +219,7 @@ input[type=button]:hover {
 
 #character {
 	position: relative;
-	bottom: -166.5px;
+	bottom: -162px;
 }
 
 #peach {
