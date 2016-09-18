@@ -27,25 +27,7 @@ function move() {
   }
 }
 
-function passWord() {
-var testV = 1;
-var pass1 = prompt('Please enter your password',' ');
-while (testV < 3) {
-if (!pass1)
-history.go(-1);
-if (pass1.toLowerCase() == "thebritisharecoming") {
-alert('You Got it Right!');
-window.open('https://docs.google.com/forms/d/e/1FAIpQLSdVxTLpim90R_QY_HeDWwz0mTPiFKxPMs6WvDDSxH6ZH9eFAw/viewform');
-break;
-}
-testV+=1;
-var pass1 =
-prompt('Sorry, seems like you do not have the correct key','Password');
-}
-if (pass1.toLowerCase()!="password" & testV ==3)
-history.go(-1);
-return " ";
-}
+
 </script>
 
   <meta type="text/css" charset="utf-8"/>
