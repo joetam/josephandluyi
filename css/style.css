@@ -6,10 +6,10 @@ html, body {
 #container {
 	position: relative;
 	height: auto;
-	top: -16px;
+	top: 0vh;
 	width: 100%;
 	min-height: 100%;
-	padding-bottom: 270px;
+	padding-bottom: 29vh;
 	overflow: hidden;
 }
 
@@ -29,11 +29,11 @@ body {
 }
 
 #myProgress {
-	position: relative;
+	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 110vw;
-	height: 5px;
+	height: 1vh;
 	background-color: #4E5B84;
 }
 
@@ -126,7 +126,7 @@ input[type=button]:hover {
 	z-index:0;
 	width: 500px;
 	margin: auto;
-	bottom: -30vh;
+	bottom: -20vh;
 	text-align: center;
 }
 
@@ -179,7 +179,7 @@ input[type=button]:hover {
 	left: -5vw;
 	width: 500px;
 	margin: auto;
-	bottom: -30vh;
+	bottom: -20vh;
 }
 
 #bushA {
@@ -233,7 +233,7 @@ input[type=button]:hover {
 
 #mario {
 	position: relative;
-	left: 100vw;
+	left: 91vw;
 	z-index:3;
 	animation: Mariowalk 5s normal ease-out;
 	animation-fill-mode: forwards;
@@ -336,7 +336,7 @@ input[type=button]:hover {
 
 @keyframes Mariowalk {
 	0% {
-		left:10vw;
+		left:91vw;
 	}
 	10% {
 		transform:translateY(-120%)
@@ -358,17 +358,17 @@ input[type=button]:hover {
 	}
 	90% {
 		opacity: 1;
-		left:-45vw;
+		left:50vw;
 		transform: scale(1);
 	}
 	95% {
 		opacity: 0.5;
-		left: -45vw;
+		left: 50vw;
 		transform: scale(0.5);
 	}
 	100% {
 		opacity: 0;
-		left: -45vw;
+		left: 50vw;
 		transform: scale(0.5);
 	}
 }
@@ -407,8 +407,8 @@ input[type=button]:hover {
 }
 
 #turtle {
-		padding-top: 10px;
     position: relative;
+		top: 1vh;
     -webkit-animation: float 2s infinite  normal ease-out;
     animation: float 8s infinite  normal ease-out;
 		z-index: 2;
