@@ -782,8 +782,8 @@ input[type=button]:hover {
 #turtle {
     position: relative;
 		top: 1vh;
-		-moz-animation: float 2s infinite  normal ease-out;
-		-webkit-animation: float 2s infinite  normal ease-out;
+		-moz-animation: float 6s infinite  normal ease-out;
+		-webkit-animation: float 6s infinite  normal ease-out;
     animation: float 8s infinite  normal ease-out;
 		z-index: 2;
 }
