@@ -3,20 +3,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="scripts/google-analytics.js"></script>
 <script>
-
-function start_scroll_down() {
-     scroll = setInterval(function(){ window.scrollBy(0, 3000); console.log('start');}, 1500);
-   }
-
-function stop_scroll_down() {
-     clearInterval(scroll);
-     console.log('stop');
-  }
-
 function move() {
   var elem = document.getElementById("myBar");
   var width = 1;
-  var id = setInterval(frame, 25);
+  var id = setInterval(frame, 10);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
@@ -27,6 +17,10 @@ function move() {
   }
 }
 
+function scrolldown() {
+var duration = 1000
+zenscroll.intoView(footer, 1000)
+}
 
 </script>
 
@@ -36,7 +30,7 @@ function move() {
   <title> L+J Save the Date </title>
 </head>
 
-<body onload="setTimeout(start_scroll_down, 1200);move();setTimeout(stop_scroll_down, 4000)">
+<body onload="setTimeout(scrolldown, 1200);move();">
 <div id="container">
     <div id="myProgress">
     <div id="myBar"></div>
@@ -80,9 +74,11 @@ function move() {
     <img id="bighill2" src="pngs/bighill.png" alt="bighill2">
     <img id="largehill" src="pngs/bighill.png" alt="largehill">
     </div></center>
-    
+
   </div>
   <div id="footer">
   </div>
+  <script src="scripts/zenscroll.js"></script>
+  <script src="scripts/zenscroll-min.js"></script>
 </body>
 </html>
