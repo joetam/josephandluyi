@@ -109,6 +109,8 @@ input[type=button] {
 	letter-spacing: 3px;
 	opacity: 0;
 	text-decoration:none;
+	-webkit-animation: appear 1s normal ease-in;
+	-moz-animation: appear 1s normal ease-in;
 	animation: appear 1s normal ease-in;
 	animation-fill-mode: forwards;
 	animation-delay: 12s;
@@ -154,12 +156,51 @@ input[type=button]:hover {
 	bottom: 355px;
 	opacity: 0;
 	z-index:-3;
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-animation: raise 5s normal linear;
+	-moz-animation: raise 5s normal linear;
 	animation: raise 5s normal linear;
 	animation-fill-mode: forwards;
 	animation-delay: 8s;
 }
 
 @keyframes raise {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		bottom:150px;
+	}
+	10% {
+		opacity: 1;
+		visibility: visible;
+		bottom:150px;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		bottom: 355px;
+	}
+}
+
+@-webkit-keyframes raise {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		bottom:150px;
+	}
+	10% {
+		opacity: 1;
+		visibility: visible;
+		bottom:150px;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		bottom: 355px;
+	}
+}
+
+@-moz-keyframes raise {
 	0% {
 		opacity: 0;
 		visibility: hidden;
@@ -246,6 +287,8 @@ input[type=button]:hover {
 	left: -32vw;
 	bottom: 0px;
 	z-index:2;
+	-webkit-animation: Peachwalk 5s normal ease-out;
+	-moz-animation: Peachwalk 5s normal ease-out;
 	animation: Peachwalk 5s normal ease-out;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
@@ -256,6 +299,8 @@ input[type=button]:hover {
 	right: -32vw;
 	bottom: 0px;
 	z-index:3;
+	-webkit-animation: Mariowalk 5s normal ease-out;
+	-moz-animation: Mariowalk 5s normal ease-out;
 	animation: Mariowalk 5s normal ease-out;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
@@ -274,6 +319,8 @@ input[type=button]:hover {
 	z-index: -2;
 	opacity: 0;
 	bottom: 0px;
+	-webkit-animation: Peachwalk2 3s normal linear;
+	-moz-animation: Peachwalk2 3s normal linear;
 	animation: Peachwalk2 3s normal linear;
 	animation-fill-mode: forwards;
 	animation-delay: 8s;
@@ -286,12 +333,36 @@ input[type=button]:hover {
 	opacity: 0;
 	z-index: -1;
 	bottom: 0px;
+	-webkit-animation: Mariowalk2 3s normal linear;
+	-moz-animation: Mariowalk2 3s normal linear;
 	animation: Mariowalk2 3s normal linear;
 	animation-fill-mode: forwards;
 	animation-delay: 8s;
 }
 
 @keyframes appear {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@-webkit-keyframes appear {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@-moz-keyframes appear {
 	0% {
 		opacity: 0;
 		visibility: hidden;
@@ -324,7 +395,117 @@ input[type=button]:hover {
 	}
 }
 
+@-webkit-keyframes Peachwalk {
+	0% {
+		left:-32vw;
+	}
+	90% {
+		opacity: 1;
+		left: calc(50% - 26px);
+		transform: scale(1);
+	}
+	95% {
+		opacity: 0.5;
+		left: calc(50% - 26px);
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.5);
+		left: calc(50% - 26px);
+	}
+}
+
+@-moz-keyframes Peachwalk {
+	0% {
+		left:-32vw;
+	}
+	90% {
+		opacity: 1;
+		left: calc(50% - 26px);
+		transform: scale(1);
+	}
+	95% {
+		opacity: 0.5;
+		left: calc(50% - 26px);
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.5);
+		left: calc(50% - 26px);
+	}
+}
+
 @keyframes Peachwalk2 {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+		right:calc(50% - 26px);
+	}
+	25% {
+		opacity: 1;
+		transform: scale(1);
+		height: 100px;
+		right: calc(50% - 26px);
+	}
+	90% {
+		opacity: 1;
+		height: 100px;
+		right:calc(50% - 60px);
+		-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	}
+	100% {
+		right: calc(50% - 60px);
+		height: 100px;
+		opacity: 1;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+	}
+}
+
+@-webkit-keyframes Peachwalk2 {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+		right:calc(50% - 26px);
+	}
+	25% {
+		opacity: 1;
+		transform: scale(1);
+		height: 100px;
+		right: calc(50% - 26px);
+	}
+	90% {
+		opacity: 1;
+		height: 100px;
+		right:calc(50% - 60px);
+		-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	}
+	100% {
+		right: calc(50% - 60px);
+		height: 100px;
+		opacity: 1;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+	}
+}
+
+@-moz-keyframes Peachwalk2 {
 	0% {
 		opacity: 0;
 		transform: scale(0.5);
@@ -404,7 +585,163 @@ input[type=button]:hover {
 	}
 }
 
+@-webkit-keyframes Mariowalk {
+	0% {
+		right:-32vw;
+	}
+	10% {
+		transform:translateY(-120%)
+	}
+	20% {
+		transform:translateY(0)
+	}
+	30% {
+		transform:translateY(-120%)
+	}
+	40% {
+		transform:translateY(0)
+	}
+	50% {
+		transform:translateY(-120%)
+	}
+	60% {
+		transform:translateY(0)
+	}
+	70% {
+		transform:translateY(-120%)
+	}
+	80% {
+		transform:translateY(0)
+	}
+	90% {
+		opacity: 1;
+		right: calc(50% - 24px);
+		transform: scale(1);
+	}
+	95% {
+		opacity: 0.5;
+		right:calc(50% - 24px);
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 0;
+		right:calc(50% - 24px);
+		transform: scale(0.5);
+	}
+}
+
+@-moz-keyframes Mariowalk {
+	0% {
+		right:-32vw;
+	}
+	10% {
+		transform:translateY(-120%)
+	}
+	20% {
+		transform:translateY(0)
+	}
+	30% {
+		transform:translateY(-120%)
+	}
+	40% {
+		transform:translateY(0)
+	}
+	50% {
+		transform:translateY(-120%)
+	}
+	60% {
+		transform:translateY(0)
+	}
+	70% {
+		transform:translateY(-120%)
+	}
+	80% {
+		transform:translateY(0)
+	}
+	90% {
+		opacity: 1;
+		right: calc(50% - 24px);
+		transform: scale(1);
+	}
+	95% {
+		opacity: 0.5;
+		right:calc(50% - 24px);
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 0;
+		right:calc(50% - 24px);
+		transform: scale(0.5);
+	}
+}
+
 @keyframes Mariowalk2 {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+		left: calc(50% - 26px);
+	}
+	25% {
+		opacity: 1;
+		transform: scale(1);
+		left: calc(50% - 26px);
+	}
+	90% {
+		opacity: 1;
+		transform: scale(1);
+		left: calc(50% - 60px);
+		-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	}
+	100% {
+		left: calc(50% - 60px);
+		height: 64px;
+		opacity: 1;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+	}
+}
+
+@-webkit-keyframes Mariowalk2 {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+		left: calc(50% - 26px);
+	}
+	25% {
+		opacity: 1;
+		transform: scale(1);
+		left: calc(50% - 26px);
+	}
+	90% {
+		opacity: 1;
+		transform: scale(1);
+		left: calc(50% - 60px);
+		-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	}
+	100% {
+		left: calc(50% - 60px);
+		height: 64px;
+		opacity: 1;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+	}
+}
+
+@-moz-keyframes Mariowalk2 {
 	0% {
 		opacity: 0;
 		transform: scale(0.5);
@@ -440,7 +777,8 @@ input[type=button]:hover {
 #turtle {
     position: relative;
 		top: 1vh;
-    -webkit-animation: float 2s infinite  normal ease-out;
+		-moz-animation: float 2s infinite  normal ease-out;
+		-webkit-animation: float 2s infinite  normal ease-out;
     animation: float 8s infinite  normal ease-out;
 		z-index: 2;
 }
@@ -484,6 +822,46 @@ input[type=button]:hover {
 				left:-30px;
 
 }
+
+@-moz-keyframes float {
+	0% {
+			top:20px;
+			left:-30px;
+	}
+	13% {
+			top:0px;
+			left:-30px;
+	}
+	25% {
+			top:20px;
+			left:-30px;
+	}
+	37% {
+			top: 0px;
+			left:0px;
+	}
+	50% {
+			top: 20px;
+			left:30px;
+	}
+	62% {
+			top: 0px;
+			left:30px;
+	}
+	75% {
+			top: 20px;
+			left:30px;
+	}
+	87% {
+			top: 0px;
+			left:0px;
+	}
+	100% {
+			top: 20px;
+			left:-30px;
+
+}
+
 
 @keyframes float {
 	0% {
